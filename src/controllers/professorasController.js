@@ -29,3 +29,10 @@ exports.getById = (req, res) => {
   delete prof.cpf 
 res.status(200).send(prof)
 }
+
+exports.getById = (req, res) => {
+  const id = req.params.id
+  const prof = professoras.find(prof => prof.id == id)
+  delete prof.cpf 
+  res.status(200).send(prof)
+}
